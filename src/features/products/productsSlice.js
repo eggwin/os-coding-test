@@ -21,7 +21,7 @@ export const { loadProducts, addToCart } = productsSlice.actions;
 export const retrieveProducts = () => dispatch => {
   fetch("https://os-coding-test.s3-us-west-1.amazonaws.com/json/productList.json")
   .then(response => response.json())
-  .then(data => { console.log('data', data); dispatch(loadProducts(data))});
+  .then(data => dispatch(loadProducts(data)));
 }
 
 export const productsList = state => state.products.products;

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { productsInCartList } from '../../products/productsSlice';
 import styles from './fulfillments.module.css';
@@ -7,6 +7,7 @@ import styles from './fulfillments.module.css';
 export function Fulfillments() {
   const cartProducts = useSelector(productsInCartList);
   const brands = [];
+  const [update, setUpdate] = useState(0);
 
   const fulfillmentsByBrand = cartProducts.reduce((acc, product) => {
     if (!brands.includes(product.brand_name)) {
@@ -81,6 +82,18 @@ export function Fulfillments() {
               <Row>
                 <Col>
                   ${fulfillmentRow.price.toFixed(2)}
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Button variant="outline-dark">Delete</Button>
+                </Col>
+                <Col>
+                  <Button variant="outline-dark">Save for Later</Button>
+                </Col>
+                <Col>
+                  <Button variant="outline-dark">Update</Button>
+                  <input type="text" value={update} onChange={(e) => setUpdate(e.target.value)} />
                 </Col>
               </Row>
             </Col>
