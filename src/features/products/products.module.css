@@ -1,0 +1,48 @@
+.plusSign {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.cardTitleTop {
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.cardTitleBottom {
+  font-style: italic;
+}
+
+.productsRow {
+  display: inline-block;
+}
+
+.quantityContainer {
+  position: absolute;
+  margin-top: -90px;
+  left: 150px;
+}
+
+.totalCartContainer {
+  font-size: 16px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.totalCart {
+  color: red;
+}
+
+.quantity {
+  width: 50px;
+  font-size: 24px;
+  font-weight: 600;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px 15px;
+  background-color: #eee;
+}
+
+.productCart {
+  border: none;
+}

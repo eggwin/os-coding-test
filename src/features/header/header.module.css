@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.cartQuantity {
+  color: red;
+  font-size: 24px;
+  font-weight: 800;
+  position: absolute;
+  right: 61px;
+  margin-top: 40px;
+}
+
+.cartIcon {
+  cursor: pointer;
+}

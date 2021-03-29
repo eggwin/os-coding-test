@@ -1,0 +1,9 @@
+.summaryContainer {
+  border: 1px solid black;
+  padding: 10px;
+  max-width: 300px;
+}
+
+.topSummary {
+  border-bottom: 1px solid black;
+}
